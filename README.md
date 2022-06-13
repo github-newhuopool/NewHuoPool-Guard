@@ -38,9 +38,11 @@ sudo docker logs huobipool-guard
 
 在 https://guard.hpt.com/ 绑定完成后, 前往 设置中心-IP段管理 添加扫描IP范围, Guard 将自动更新扫描配置, 对设置的 IP 段进行扫描.
 
-### 五、 更新 Guard
+### 五、 其它
 
-#### 1. 手动更新
+#### 1. Guard 的更新
+
+##### 1.1 手动更新
 
 执行以下命令来获取最新的 Guard, 并停止当前运行的 Guard:
 
@@ -51,7 +53,7 @@ sudo docker rm -f huobipool-guard
 
 然后使用 步骤2 的命令来启动 Guard.
 
-#### 2. 自动更新
+##### 1.2 配置自动更新
 
 执行以下命令来启动自动更新:
 
