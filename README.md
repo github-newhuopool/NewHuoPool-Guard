@@ -1,5 +1,7 @@
 # Huobipool-Guard
 
+Read this in [English](README.en.md).
+
 ## 使用说明
 
 ### 一、 安装 Docker
