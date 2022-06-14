@@ -1,10 +1,12 @@
 # Huobipool-Guard
 
+> It is recommended to use Docker to manage and run it. If you have problems running Docker on Windows, you can download a separate Windows version of the executable to run from the [Release](https://github.com/github-huobipool/Huobipool-Guard/releases) page.
+
 ## Instructions for use
 
 ### I. Installing Docker
 
-Reference: https://docs.docker.com/engine/install/ubuntu/
+Reference: https://docs.docker.com/engine/install/
 
 Execute the following command in the terminal:
 

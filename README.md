@@ -2,11 +2,13 @@
 
 Read this in [English](README.en.md).
 
+> 推荐使用 Docker 来管理和运行. 如果在 Windows 上使用 Docker 运行遇到问题, 可以在 [Release](https://github.com/github-huobipool/Huobipool-Guard/releases) 页面下载单独的 Windows 版本可执行文件运行.
+
 ## 使用说明
 
 ### 一、 安装 Docker
 
-参考资料: https://docs.docker.com/engine/install/ubuntu/
+参考资料: https://docs.docker.com/engine/install/
 
 在终端中执行以下命令:
 
@@ -21,6 +23,7 @@ sudo sh get-docker.sh
 
 ```
 sudo docker run -it -d \
+--restart always \
 --name huobipool-guard \
 --volume /etc/machine-id:/etc/machine-id \
 registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
