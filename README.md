@@ -24,7 +24,7 @@ sudo sh get-docker.sh
 ```
 sudo docker run -it -d \
 --restart always \
---name huobipool-guard \
+--name huobipool-scanner-guard \
 --volume /etc/machine-id:/etc/machine-id \
 registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
 ```
@@ -34,7 +34,7 @@ registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
 在终端中执行以下命令查看日志:
 
 ```
-sudo docker logs huobipool-guard
+sudo docker logs huobipool-scanner-guard
 ```
 
 找到 "Guard ID: xxxxxxxxxxxxxxxxxxxxxxxxx" 信息, 将该信息进行反馈, 得到确认后前往 https://guard.hpt.com/ 注册账号, 并用该 ID 添加绑定矿场.
@@ -53,7 +53,7 @@ sudo docker logs huobipool-guard
 
 ``` 
 sudo docker pull registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
-sudo docker rm -f huobipool-guard
+sudo docker rm -f huobipool-scanner-guard
 ```
 
 然后使用 步骤2 的命令来启动 Guard.
@@ -69,4 +69,4 @@ sudo docker run --detach \
 containrrr/watchtower --interval 300
 ```
 
-此后 Guard 将一直保持最新版本运行.
+此后 Guard 将自动保持最新版本运行.
