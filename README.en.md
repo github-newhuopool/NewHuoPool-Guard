@@ -1,6 +1,6 @@
-# Huobipool-Guard
+# NewHuoPool-Guard
 
-> It is recommended to use Docker to manage and run it. If you have problems running Docker on Windows, you can download a separate Windows version of the executable to run from the [Release](https://github.com/github-huobipool/Huobipool-Guard/releases) page.
+> It is recommended to use Docker to manage and run it. If you have problems running Docker on Windows, you can download a separate Windows version of the executable to run from the [Release](https://github.com/github-newhuopool/NewHuoPool-Guard/releases) page.
 
 ## Instructions for use
 
@@ -23,7 +23,7 @@ Execute the following command in the terminal to start Guard:
 sudo docker run -it -d \
 --name huobipool-guard \
 --volume /etc/machine-id:/etc/machine-id \
-registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
+registry.cn-hongkong.aliyuncs.com/newhuopool-public/scanner-guard:prd
 ```
 
 ### III. View Guard ID
@@ -31,14 +31,14 @@ registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
 Execute the following command in the terminal to view the logs:
 
 ```
-sudo docker logs huobipool-guard
+sudo docker logs newhuopool-guard
 ```
 
-Find the message "Guard ID: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx", send the message back, get the confirmation, go to https://guard.hpt.com/ to register the account, and use the ID to bind the mine.
+Find the message "Guard ID: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx", send the message back, get the confirmation, go to https://guard.pool.newhuotech.com/ to register the account, and use the ID to bind the mine.
 
 ### IV. Configure the scanning IP segment
 
-After the mine is bound on https://guard.hpt.com/ , go to `Settings Center` - `IP Segment Management` to add the scanning IP range, Guard will automatically update the scanning configuration to scan the set IP segment.
+After the mine is bound on https://guard.pool.newhuotech.com/ , go to `Settings Center` - `IP Segment Management` to add the scanning IP range, Guard will automatically update the scanning configuration to scan the set IP segment.
 
 ### V. Other
 
@@ -49,8 +49,8 @@ After the mine is bound on https://guard.hpt.com/ , go to `Settings Center` - `I
 Execute the following command to get the latest Guard, and stop the currently running Guard:
 
 ``` 
-sudo docker pull registry.cn-hongkong.aliyuncs.com/huobipool-public/scanner-guard:prd
-sudo docker rm -f huobipool-guard
+sudo docker pull registry.cn-hongkong.aliyuncs.com/newhuopool-public/scanner-guard:prd
+sudo docker rm -f newhuopool-guard
 ```
 
 Then use the command from step 2 to start the Guard.
